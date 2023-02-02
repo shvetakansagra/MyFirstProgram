@@ -1,0 +1,26 @@
+
+<% for(var i= 0; i<users.length; i++){%>
+<tr>
+    <td><%=i + 1%></td>
+    <td><%=users[i].Fname %></td>
+    <td><%=users[i].Lname %></td>
+    <td><%=users[i].FullName %></td>
+    <td><%=users[i].Email %></td>
+    <td><%=users[i].DOB %></td>
+    <td><%=users[i].Age %></td>
+    <td><%=users[i].Gender %></td>
+    <td><%=users[i].Hobbies %></td>
+    <td><%=users[i].Phone %></td>
+    <td><%=users[i].Address %></td>
+    <td><%=users[i].Status %></td>
+   <td>
+    <!-- //?id=<%=users[i]._id %> -->
+        <a href="/views/update_Data.html?id=<%=users[i]._id %>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%=users[i]._id%>>
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

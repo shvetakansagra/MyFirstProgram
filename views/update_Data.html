@@ -1,0 +1,110 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+<!--Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Data</a>
+            </div>
+        </div>
+      <div class="form-title text-center">
+        <h2 class="text-dark">Update User Data</h2>
+        <span class="text-light">Use the Bellow form to update data</span>
+      </div>
+      
+      <!--update user form-->
+      <!--form handling-->
+<form action="/api/users" method="POST" id="update_Data">
+    <div class="New_Data">
+        <div class="form-group">
+            <label for="Fname" class="text-light">Fname :</label>
+            <label for="hidden" name="id",value="<%=user._id%>"></label>
+            <input type="text" name="Fname" value="<%=user.Fname%>" placeholder="Mark">
+        </div>
+        <div class="form-group">
+            <label for="Lname" class="text-light">Lname :</label>
+            <input type="text" id="Lname" name="Lname" value="<%=user.Lname%>" placeholder="stoenis">
+        </div>
+        <div class="form-group">
+            <label for="FullName" class="text-light">FullName :</label>
+            <input type="text" id="FullName" name="FullName" value="<%=user.FullName%>" placeholder="Mark stoenis">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email :</label>
+            <input type="text" name="Email" value="<%=user.Email%>" placeholder="Example@gmail.com">
+        </div>
+        <div class="form-group">
+
+            <label for="DOB" class="text-light">DOB :</label>
+            <!-- Date DOB = new Date('<%= user.DOB %>');  -->
+            <input type="datepicker" id="DOB" value="<%=user.DOB%>" placeholder="DD/MM/YYYY">
+            <!-- <%=user.DOB%> -->
+        </div>
+        <div class="form-group">
+            <label for="Age" class="text-light">Age :</label>
+            <input type="text" id="Age" value="<%=user.Age%>" name="Age" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Gender" class="text-light">Gender :</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="Gender" value="Male" <%=user.Gender=='Male'?'checked':''%>>
+                <label for="radio-2" class="radio-label1">Male :</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="Gender" value="Female" <%=user.Gender=='Female'?'checked':''%>>
+                <label for="radio-3" class="radio-label1">Female :</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Phone" class="text-light">Phone :</label>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="text" id="Phone" value="<%=user.Phone%>" name="Phone" size="10">
+        </div>
+        <div class="form-group">
+            <label for="Hobbies" class="text-light">Hobbies :</label>
+            <div class="radio inline">
+                <input type="checkbox" id="cricket-1" name="Hobbies" value="cricket" <%=user.Hobbies=='cricket'?'checked':''%>>
+                <label for="cricket-1" class="text-light">cricket :</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" id="football-2" name="Hobbies" value="football" <%=user.Hobbies=='football'?'checked':''%>>
+                <label for="football-2" class="text-light">football :</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" id="hockey-3" name="Hobbies" value="hockey" <%=user.Hobbies=='hockey'?'checked':''%>>
+                <label for="hockey-3" class="text-light">hockey :</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="textarea" class="text-light">Address :</label>
+            <textarea cols="80" rows="2"  name="Address"><%=user.Address%></textarea>
+        </div>
+        <div class="form-group">
+            <label for="gender" class="text-light">Status :</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="Status" value="Active" <%=user.Status=='Active'?'checked':''%>>
+                <label for="radio-4" class="radio-label">Active </label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="Status" value="InActive" <%=user.Status=='InActive'?'checked':''%>>
+                <label for="radio-5" class="radio-label">InActive </label>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="form-group">
+        <button type="submit" class="btn text-dark update">Save Data</button>
+    </div>
+    </div>
+</form>
+    
+</div>
+</main>
+ <!--/Main Site-->
+
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->

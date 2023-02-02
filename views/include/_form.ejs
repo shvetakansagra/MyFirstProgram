@@ -1,0 +1,79 @@
+<!--form handling-->
+<form action="/api/users" method="POST" id="Add_Data">
+    <div class="New_Data">
+        <div class="form-group">
+            <label for="Fname" class="text-light">Fname :</label>
+            <input type="text" id="Fname" name="Fname" placeholder="Mark">
+        </div>
+        <div class="form-group">
+            <label for="Lname" class="text-light">Lname :</label>
+            <input type="text" id="Lname" name="Lname" placeholder="stoenis">
+        </div>
+        <div class="form-group">
+            <label for="FullName" class="text-light">FullName :</label>
+            <input type="text" id="FullName" name="FullName" placeholder="Mark stoenis">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email :</label>
+            <input type="text" name="Email" value="" placeholder="Example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="DOB" class="text-light">DOB :</label>
+            <input type="datepicker" name="DOB" placeholder="YYYY/MM/DD">
+        </div>
+        <div class="form-group">
+            <label for="Age" class="text-light">Age :</label>
+            <input type="text" id="Age" name="Age" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Gender" class="text-light">Gender :</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="Gender" value="Male">
+                <label for="radio-2" class="radio-label">Male :</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="Gender" value="Female">
+                <label for="radio-3" class="radio-label">Female :</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Phone" class="text-light">Phone :</label>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="text" id="Phone" name="Phone" size="10" />
+        </div>
+        <div class="form-group">
+            <label for="Hobbies" class="text-light">Hobbies :</label>
+            <div class="radio inline">
+                <input type="checkbox" id="cricket-1" name="Hobbies" value="cricket" />
+                <label for="cricket-1" class="text-light">cricket :</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" id="football-2" name="Hobbies" value="football" />
+                <label for="football-2" class="text-light">football :</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" id="hockey-3" name="Hobbies" value="hockey" />
+                <label for="hockey-3" class="text-light">hockey :</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="textarea" class="text-light">Address :</label>
+            <textarea cols="80" rows="2" id="Address" name="Address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="gender" class="text-light">Status :</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="Status" value="Active">
+                <label for="radio-4" class="radio-label">Active </label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="Status" value="InActive">
+                <label for="radio-5" class="radio-label">InActive </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn text-dark update">Save Data</button>
+    </div>
+    </div>
+</form>
